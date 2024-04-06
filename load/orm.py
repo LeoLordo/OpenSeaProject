@@ -96,19 +96,3 @@ class ORM:
             """
             self.cur.execute(select_query)
         return self.cur.fetchall()
-
-
-
-
-# data_list = Extract(api_key="6afc226105fd474b85998fe4ea531ac9", url="https://api.opensea.io/api/v2/collections").extract_collections()
-# df = Transform(data_list).transform_data()
-# print(df)
-# orm = ORM(host='localhost', dbname='postgres', user='postgres', password='123456789', port='5432', table_name="collections", data=df)
-# orm.create_table()
-# # orm.delete_table()
-# orm.insert_data()
-
-# print(orm.read_data())
-# orm.remove_column(column_name=["name", "image_url"])
-# print(orm.filter_data(ilike="%M%", column_name="twitter_username"))
-# mobk2301
